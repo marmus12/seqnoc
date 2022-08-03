@@ -4,4 +4,5 @@ The Implementation for the IEEE Access paper "Lossless Compression of Point Clou
 Requirements:
 
 PyTorch (tested with version 1.10.2)
+
 TorchAC (https://github.com/fab-jul/torchac)

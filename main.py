@@ -89,7 +89,10 @@ elif args.cnn == 'SNHM':
 
 
 
-from enc_functs_4p3 import ENCODE_DECODE
+if fourpass:
+    from enc_functs_4p3 import ENCODE_DECODE
+else:
+    from enc_functs_pt6 import ENCODE_DECODE
 decode=args.decode
 
 

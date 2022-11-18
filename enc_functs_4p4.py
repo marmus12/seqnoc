@@ -409,7 +409,7 @@ def ENCODE_DECODE(ENC,bs_dir,nn_model,ori_level=0,GT=0,device = torch.device('cu
             # llbss = np.max(np.where(dSSLs[level,:])[0])+1
             # lbss_in = read_ints(10*np.ones((llbss,),int), bs_dir+'lbss'+str(level)+'.bs')
             
-            lbss_in = GR_ENCODE_DECODE(ENC,0,bs_dir+'lbss'+str(level)+'.bs',maxk1=maxk1)-3
+            lbss_in = GR_ENCODE_DECODE(ENC,0,bs_dir+'lbss'+str(level)+'.bs',maxk1=maxk1)-30
             # lbss_in = block_GR_ED(ENC, 0,bs_dir+'lbss'+str(level)+'.bs',maxk1=maxk1,block_size=gr_block_size)
             
             with open(bs_dir +'AC'+str(level)+'.b', 'rb') as fin:
@@ -424,7 +424,7 @@ def ENCODE_DECODE(ENC,bs_dir,nn_model,ori_level=0,GT=0,device = torch.device('cu
         if ENC:
             # write_ints(lbss, 10*np.ones((len(lbss),),int), bs_dir+'lbss'+str(level)+'.bs')
     
-            GR_ENCODE_DECODE(ENC,lbss+3,bs_dir+'lbss'+str(level)+'.bs',maxk1=maxk1)
+            GR_ENCODE_DECODE(ENC,lbss+30,bs_dir+'lbss'+str(level)+'.bs',maxk1=maxk1)
             # block_GR_ED(ENC, lbss,bs_dir+'lbss'+str(level)+'.bs',maxk1=maxk1,block_size=gr_block_size)
     
             with open(bs_dir +'AC'+str(level)+'.b', 'wb') as fout:
